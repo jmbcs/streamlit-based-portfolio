@@ -26,18 +26,18 @@ def set_section():
                 <h2> About Me </h2>
                 <ul>
                     <li> Hi there! 👋</li>
-                    <li> My name is Júlio Silva and I am a 27-year-old developer from Portugal 🇵🇹</li>
+                    <li> My name is Júlio Silva and I am a developer from Portugal 🇵🇹</li>
                 </ul>
                 
 
                 <h2> Personal Details</h2>
 
                 <ul>
-                    <li><strong>Age:</strong> 27</li>
-                    <li><strong>Nationality:</strong> Portuguese 🇵🇹</li>
-                    <li><strong>Current Position:</strong> Research & Development Engineer at Wavecom Technologies</li>
-                    <li><strong>Work Experience:</strong> 3 years</li>
-                    <li><strong>Education:</strong> M.Sc Electronics and Telecommunications Engineering, <br>University of Aveiro</a></li>
+                    <li><strong style="color: #ff4c4c;">Age</strong> 27</li>
+                    <li><strong style="color: #ff4c4c;">Nationality</strong> Portuguese</li>
+                    <li><strong style="color: #ff4c4c;">Current Position</strong> Research & Development Engineer at Wavecom Technologies</li>
+                    <li><strong style="color: #ff4c4c;">Work Experience</strong> 3 years</li>
+                    <li><strong style="color: #ff4c4c;">Education</strong> M.Sc Electronics and Telecommunications Engineering, <br>University of Aveiro</a></li>
                 </ul>
 
                 <h2>Hobbies & Interests</h2>
@@ -45,17 +45,16 @@ def set_section():
           
 
                 <ul>
-                    <li>😄 <strong>Comedy:</strong> Ricky Gervais, Daniel Sloss, and Anthony Jeselnik fan right here</li>
-                    <li>📖 <strong>Reading:</strong> Reading is essential to keep my mind sharp</li>
-                    <li>🎮 <strong>Videogames:</strong> I am a certified gamer since 6 years old</li>
-                    <li>🍿 <strong>Movies & Series:</strong> You know nothing Jon Snow!</li>
-                    <li>🏞️ <strong>Hiking:</strong> Hiking with the family is a time well spent</li>
-                    <li>💻 <strong>Coding:</strong> I love bringing ideas to life through code</li>
-                    <li>💪 <strong>Gym:</strong> Keeping both my mind and body in shape is crucial for my happiness</li>
-                    <li>🎵 <strong>Music:</strong> Music is a constant companion in my life</li>
-                    <li>🌇 <strong>Travelling:</strong> I love visiting new countries and cities</li>
-                    <li>💵 <strong>Finances & Investing:</strong> I like to keep up with financial markets and exploring new investment opportunities
-                    opportunities</li>
+                    <li>😄 <strong style="color: #ff4c4c;">Comedy</strong> Ricky Gervais, Daniel Sloss, and Anthony Jeselnik fan right here</li>
+                    <li>📖 <strong style="color: #ff4c4c;">Reading</strong> Reading is essential to keep my mind sharp</li>
+                    <li>🎮 <strong style="color: #ff4c4c;">Videogames</strong> I am a certified gamer since 6 years old</li>
+                    <li>🍿 <strong style="color: #ff4c4c;">Movies & Series</strong> You know nothing Jon Snow!</li>
+                    <li>🏞️ <strong style="color: #ff4c4c;">Hiking</strong> Hiking with the family is a time well spent</li>
+                    <li>💻 <strong style="color: #ff4c4c;">Coding</strong> I love bringing ideas to life through code</li>
+                    <li>💪 <strong style="color: #ff4c4c;">Gym</strong> Keeping both my mind and body in shape is crucial for my happiness</li>
+                    <li>🎵 <strong style="color: #ff4c4c;">Music</strong> Music is a constant companion in my life</li>
+                    <li>🌇 <strong style="color: #ff4c4c;">Travelling</strong> I love visiting new countries and cities</li>
+                    <li>💵 <strong style="color: #ff4c4c;">Finances & Investing</strong> I like to keep up with financial markets and exploring new investment opportunities</li>
                 </ul>
 
                 </body>
