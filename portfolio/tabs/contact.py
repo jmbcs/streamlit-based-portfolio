@@ -27,6 +27,9 @@ def set_section():
 
             st.markdown(contact_form, unsafe_allow_html=True)
 
+            # add empty space (fixs jumping around between buttons)
+            st.markdown("#\n" * 7)
+
             portfolio.style.set_style(path_to_style=config.styles.form)
         with col2:
             st_lottie(config.animations.contact, height=550, width=780)
