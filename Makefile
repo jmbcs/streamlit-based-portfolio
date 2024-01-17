@@ -13,4 +13,4 @@ clean: ## Clean repo
 
 
 streamlit:
-	@streamlit run /home/julio/PrivateProjects/portfolio/portfolio/home.py
+	@streamlit run /home/julio/PrivateProjects/portfolio/portfolio/__main__.py
