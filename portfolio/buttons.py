@@ -3,34 +3,20 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 from streamlit_option_menu import option_menu
 
-
-def get_lottie_animation(url: str) -> bytes | None:
-    response = requests.get(url)
-    if response.status_code != 200:
-        data = None
-    else:
-        data = response.json()
-    return data
+import json
 
 
-COMPUTER_ANIMATION = get_lottie_animation(
-    url="https://lottie.host/b3725bf1-207f-47b0-8f42-f9b2fbde17f5/AICc3sX4ge.json"
-)
+with open("portfolio/animation/about.json") as source:
+    ABOUT_ANIMATION = json.load(source)
 
-ABOUT_ANIMATION = get_lottie_animation(
-    url="https://lottie.host/0898ab9f-2597-4fa5-95e5-bce8b5ad3002/SRb1DCS2Vg.json"
-)
+with open("portfolio/animation/computer.json") as source:
+    COMPUTER_ANIMATION = json.load(source)
 
-CONTACT_ANIMATION = get_lottie_animation(
-    url="https://lottie.host/556f0732-5b1f-4e8c-8f65-c1e86e73ca8f/mOJPjTHpMU.json"
-)
+with open("portfolio/animation/contact.json") as source:
+    CONTACT_ANIMATION = json.load(source)
 
-# EXPERIENCE_ANIMATION = get_lottie_animation(
-#     url="https://lottie.host/1ebbb2c4-1379-49c9-a9e0-7ae421f7baf1/nfUWf4lmzR.json"
-# )
-EXPERIENCE_ANIMATION = get_lottie_animation(
-    url="https://lottie.host/98bae704-fc8c-4869-b698-820a1bfebb64/sY8eoRSEyZ.json"
-)
+with open("portfolio/animation/experience.json") as source:
+    EXPERIENCE_ANIMATION = json.load(source)
 
 
 def set_pdf_button():
@@ -83,8 +69,7 @@ def set_button_bar():
                     )
 
                 with col2:
-                    if ABOUT_ANIMATION != None:
-                        st_lottie(ABOUT_ANIMATION, height=700, width=900)
+                    st_lottie(ABOUT_ANIMATION, height=700, width=900)
 
         if selected == "Projects":
             with st.container():
@@ -92,16 +77,14 @@ def set_button_bar():
                 with col1:
                     st.subheader("...")
                 with col2:
-                    if COMPUTER_ANIMATION != None:
-                        st_lottie(COMPUTER_ANIMATION, height=700, width=900)
+                    st_lottie(COMPUTER_ANIMATION, height=700, width=900)
         if selected == "Contact":
             with st.container():
                 col1, col2 = st.columns(2)
                 with col1:
                     st.subheader("...")
                 with col2:
-                    if CONTACT_ANIMATION != None:
-                        st_lottie(CONTACT_ANIMATION, height=700, width=900)
+                    st_lottie(CONTACT_ANIMATION, height=700, width=900)
 
         if selected == "Experience":
             with st.container():
@@ -126,8 +109,7 @@ def set_button_bar():
                     #         """
                     # )
                 with col2:
-                    if EXPERIENCE_ANIMATION != None:
-                        st_lottie(EXPERIENCE_ANIMATION, height=700, width=900)
+                    st_lottie(EXPERIENCE_ANIMATION, height=700, width=900)
 
     st.write("----------------")
 
