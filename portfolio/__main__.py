@@ -23,7 +23,7 @@ def run():
 
     # Subtitle
     st.write(
-        f"""<div class="subtitle" style="text-align: center;color: #ff4c4c;">Backend Enginer / Data Analyst</div>""",
+        f"""<div class="subtitle" style="text-align: center;color: #ff4c4c;">Backend Engineer - Data Analyst</div>""",
         unsafe_allow_html=True,
     )
 
@@ -32,6 +32,10 @@ def run():
     st.divider()
 
     portfolio.buttons.set_button_bar()
+
+    st.divider()
+
+    st.text("If you liked my portfolio feel free to check my code at :")
 
 
 if __name__ == "__main__":
