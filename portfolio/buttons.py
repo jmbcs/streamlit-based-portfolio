@@ -18,6 +18,9 @@ with open("portfolio/animation/contact.json") as source:
 with open("portfolio/animation/experience.json") as source:
     EXPERIENCE_ANIMATION = json.load(source)
 
+with open("portfolio/animation/skills.json") as source:
+    SKILLS_ANIMATION = json.load(source)
+
 
 def set_pdf_button():
     col1, col2, col3 = st.columns([1, 1, 1])
@@ -40,8 +43,20 @@ def set_button_bar():
     with st.container():
         selected = option_menu(
             menu_title=None,
-            options=["About", "Projects", "Contact", "Experience"],
-            icons=["person", "code-slash", "chat-left-text-fill", "briefcase"],
+            options=[
+                "About",
+                "Projects",
+                "Contact",
+                "Work Experience",
+                "Technical Skills",
+            ],
+            icons=[
+                "person",
+                "code-slash",
+                "chat-left-text-fill",
+                "briefcase",
+                "wrench",
+            ],
             orientation="horizontal",
         )
 
@@ -86,31 +101,22 @@ def set_button_bar():
                 with col2:
                     st_lottie(CONTACT_ANIMATION, height=700, width=900)
 
-        if selected == "Experience":
+        if selected == "Work Experience":
             with st.container():
                 col1, col2 = st.columns(2)
                 with col1:
                     st.subheader("Research and Development Engineer")
-                    st.text_area("uasghduisagduisa")
 
-                    # st.write("------")
-                    # st.subheader("Hobbies")
-
-                    # st.code(
-                    #     body="""
-
-                    #         \n      📖 Reading
-                    #         \n      🎮 Videogames
-                    #         \n
-                    #         \n      💪 Gym
-                    #         \n
-                    #         \n      🌇 Travelling
-                    #         \n      💵 Finances & Investing
-                    #         """
-                    # )
                 with col2:
-                    st_lottie(EXPERIENCE_ANIMATION, height=700, width=900)
+                    st_lottie(EXPERIENCE_ANIMATION, height=600, width=800)
+        if selected == "Technical Skills":
+            with st.container():
+                col1, col2 = st.columns(2)
+                with col1:
+                    st.subheader("Research and Development Engineer")
 
+                with col2:
+                    st_lottie(SKILLS_ANIMATION, height=600, width=800)
     st.write("----------------")
 
 
