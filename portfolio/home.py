@@ -1,9 +1,12 @@
 from pathlib import Path
 
 import streamlit as st
+from st_pages import Page, add_page_title, show_pages
 
 import portfolio.buttons as buttons
 import portfolio.image as image
+
+# import portfolio.pages.cv
 import portfolio.style as style
 
 # with st.echo():
@@ -35,4 +38,5 @@ st.write(
 
 buttons.set_social_icons()
 buttons.set_button_bar()
-buttons.set_pdf_button()
+
+# portfolio.pages.cv.displayPDF()
