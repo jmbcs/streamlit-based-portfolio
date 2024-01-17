@@ -17,7 +17,7 @@ def set_button_bar():
                 "About",
                 "Work Experience",
                 "Technical Skills",
-                "Projects",
+                "Projects & Papers",
                 "Curriculum",
                 "Contact",
             ],
@@ -35,7 +35,7 @@ def set_button_bar():
         if selected == "About":
             portfolio.tabs.about.set_section()
 
-        if selected == "Projects":
+        if selected == "Projects & Papers":
             portfolio.tabs.projects.set_section()
 
         if selected == "Contact":
@@ -61,7 +61,7 @@ def set_social_icons():
         ],
         "GitHub": [
             "https://github.com/jmbcs",
-            "https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg",
+            "https://static-00.iconduck.com/assets.00/github-icon-512x497-oppthre2.png",
         ],
     }
 
@@ -74,6 +74,31 @@ def set_social_icons():
         f"""
     <div style="display: flex; justify-content: center; margin-bottom: 0px;">
         {''.join(social_icons_html)}
+    </div>""",
+        unsafe_allow_html=True,
+    )
+
+
+def set_tech_stack_icons():
+    # Tech Stack Icons
+    tech_stack_icons_data = {
+        "Python": "https://img.icons8.com/color/96/000000/python.png",
+        "Grafana": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg",
+        "Prometheus": "https://static-00.iconduck.com/assets.00/prometheus-icon-2047x2048-b3aicxlu.png",
+        "Docker": "https://www.svgrepo.com/download/331370/docker.svg",
+        "GitHub": "https://static-00.iconduck.com/assets.00/github-icon-512x497-oppthre2.png",
+        "PostgreSQL": "https://cdn-icons-png.flaticon.com/512/5968/5968342.png",
+    }
+
+    tech_stack_icons_html = [
+        f"<img class='tech-stack-icon' src='{tech_stack_icons_data[tech]}' alt='{tech}' style='width: 40px; height: 40px; margin-left: 15px ; margin-right: 15px;'>"
+        for tech in tech_stack_icons_data
+    ]
+
+    st.write(
+        f"""
+    <div style="display: flex; justify-content: center; margin-bottom: 0px; ">
+        {''.join(tech_stack_icons_html)}
     </div>""",
         unsafe_allow_html=True,
     )
