@@ -2,12 +2,12 @@ import requests
 import streamlit as st
 from streamlit_lottie import st_lottie
 from streamlit_option_menu import option_menu
-
+import portfolio.button_pages.about
 import json
 
 
-with open("portfolio/animation/about.json") as source:
-    ABOUT_ANIMATION = json.load(source)
+# with open("portfolio/animation/about.json") as source:
+#     ABOUT_ANIMATION = json.load(source)
 
 with open("portfolio/animation/computer.json") as source:
     COMPUTER_ANIMATION = json.load(source)
@@ -49,6 +49,7 @@ def set_button_bar():
                 "Contact",
                 "Work Experience",
                 "Technical Skills",
+                "Curriculum",
             ],
             icons=[
                 "person",
@@ -56,35 +57,13 @@ def set_button_bar():
                 "chat-left-text-fill",
                 "briefcase",
                 "wrench",
+                "book",
             ],
             orientation="horizontal",
         )
 
         if selected == "About":
-            with st.container():
-                col1, col2 = st.columns(2)
-                with col1:
-                    st.subheader("27 Year old")
-                    st.subheader("🇵🇹 Portuguese")
-
-                    st.write("------")
-                    st.subheader("Hobbies")
-
-                    st.code(
-                        body=""" 
-                           
-                            \n      📖 Reading
-                            \n      🎮 Videogames
-                            \n      💻 Coding 
-                            \n      💪 Gym
-                            \n      🎵 Music 
-                            \n      🌇 Travelling
-                            \n      💵 Finances & Investing
-                            """
-                    )
-
-                with col2:
-                    st_lottie(ABOUT_ANIMATION, height=700, width=900)
+            portfolio.button_pages.about.set_about_section()
 
         if selected == "Projects":
             with st.container():
@@ -117,6 +96,23 @@ def set_button_bar():
 
                 with col2:
                     st_lottie(SKILLS_ANIMATION, height=600, width=800)
+
+        if selected == "Curriculum":
+            import base64
+
+            def displayPDF(file="docs/cv_julio_silva.pdf"):
+                # Opening file from file path
+                with open(file, "rb") as f:
+                    base64_pdf = base64.b64encode(f.read()).decode("utf-8")
+
+                # Embedding PDF in HTML
+                pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="1750" height="1300" type="application/pdf">'
+
+                # Displaying File
+                st.markdown(pdf_display, unsafe_allow_html=True)
+
+            displayPDF()
+
     st.write("----------------")
 
 
