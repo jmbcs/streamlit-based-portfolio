@@ -1,12 +1,12 @@
 import base64
-import json
 
 import streamlit as st
+from settings import config
 
 
 def set_profile_image():
     # Profile image file
-    with open("docs/profile.jpg", "rb") as img_file:
+    with open(config.profile_image_path, "rb") as img_file:
         img = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
 
     # Profile image
