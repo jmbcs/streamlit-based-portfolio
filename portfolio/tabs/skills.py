@@ -2,6 +2,8 @@ import streamlit as st
 from settings import config
 from streamlit_lottie import st_lottie
 
+import portfolio.buttons
+
 
 def __insert_skill(skill_type: str, skills: str):
     col1, col2 = st.columns([1, 2])
@@ -10,7 +12,6 @@ def __insert_skill(skill_type: str, skills: str):
             f"<div style='margin-left: 220px; font-size: 14px; line-height: 2.5; white-space: nowrap;'><strong>{skill_type}</strong> </div>",
             unsafe_allow_html=True,
         )
-        # st.markdown("#\n")
 
     with col2:
         split_skills = [skill.strip() for skill in skills.split(",")]
@@ -39,7 +40,16 @@ def set_section():
         with col1:
             st.markdown(
                 """
-                <h2 style='margin-left: 215px;'> Tech Skills</h2>
+                <h2 style='margin-left: 215px;'>Tech Stack</h2>
+                """,
+                unsafe_allow_html=True,
+            )
+
+            portfolio.buttons.set_tech_stack_icons()
+
+            st.markdown(
+                """
+                <h2 style='margin-left: 215px;'>Tech Skills</h2>
                 """,
                 unsafe_allow_html=True,
             )
@@ -51,7 +61,7 @@ def set_section():
             __insert_skill("Dashboading", "Grafana, Kibana")
             __insert_skill("Containerization", "Docker, Docker Compose")
             __insert_skill("Data formats", "JSON, CSV, Protobuf, YAML")
-            __insert_skill("Others", "Linux, Git, Telegraf, Linux, .envrc, Makefile")
+            __insert_skill("Others", "Git, Telegraf, Linux, direnv, Makefile")
 
             st.markdown(
                 """
@@ -67,8 +77,6 @@ def set_section():
             __insert_skill("Web Development", "Streamlit")
             __insert_skill("Data Analytics", "Pandas, Numpy, Matplotlib, Tensorflow")
             __insert_skill("Computer Vision", "ImageAI, OpenCV, Ultralytics")
-        with col2:
-            st_lottie(config.animations.skills, height=700, width=700)
 
-    # add empty space
-    st.markdown("#\n" * 10)
+        with col2:
+            st_lottie(config.animations.skills, height=650, width=650)
