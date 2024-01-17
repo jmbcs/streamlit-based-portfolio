@@ -15,19 +15,19 @@ def set_button_bar():
             menu_title=None,
             options=[
                 "About",
-                "Projects",
-                "Contact",
                 "Work Experience",
                 "Technical Skills",
+                "Projects",
                 "Curriculum",
+                "Contact",
             ],
             icons=[
                 "person",
-                "code-slash",
-                "chat-left-text-fill",
                 "briefcase",
                 "wrench",
+                "code-slash",
                 "book",
+                "chat-left-text-fill",
             ],
             orientation="horizontal",
         )
