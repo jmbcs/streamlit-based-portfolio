@@ -15,3 +15,8 @@ class Animations(BaseModel):
     contact: dict = get_animation_json(Path("portfolio/animation/contact.json"))
     experience: dict = get_animation_json(Path("portfolio/animation/experience.json"))
     skills: dict = get_animation_json(Path("portfolio/animation/skills.json"))
+
+
+class Styles(BaseModel):
+    main: Path = Path("portfolio/styles/main.css")
+    form: Path = Path("portfolio/styles/form.css")

@@ -8,7 +8,7 @@ from pydantic_settings import (
     PydanticBaseSettingsSource,
 )
 
-from portfolio.schemas import Animations
+from portfolio.schemas import Animations, Styles
 
 # from yaml import safe_load
 
@@ -35,8 +35,8 @@ _Config__SERVICE_PREFIX = "PORTFOLIO_"
 
 class Settings(BaseSettings):
     animations: Animations = Animations()
+    styles: Styles = Styles()
     profile_image_path: Path = Path("portfolio/docs/profile.jpg")
-    style_path: Path = Path("portfolio/styles/main.css")
     curriculum_path: Path = Path("portfolio/docs/cv_julio_silva.pdf")
 
     @classmethod

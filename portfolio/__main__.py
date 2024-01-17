@@ -1,4 +1,5 @@
 import streamlit as st
+from settings import config
 
 import portfolio.buttons
 import portfolio.image
@@ -10,7 +11,7 @@ def run():
         page_title="Júlio Silva's Porfolio", page_icon="💻", layout="wide"
     )
 
-    portfolio.style.set_style()
+    portfolio.style.set_style(path_to_style=config.styles.main)
 
     portfolio.image.set_profile_image()
 
