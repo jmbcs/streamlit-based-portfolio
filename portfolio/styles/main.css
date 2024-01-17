@@ -119,4 +119,6 @@ ul {
 header {
   visibility: hidden;
 }
-/* footer {visibility: hidden;} */
+footer {
+  visibility: hidden;
+}
