@@ -28,7 +28,7 @@ st.write(
 
 # Subtitle
 st.write(
-    f"""<div class="subtitle" style="text-align: center;">Backend Engineer</div>""",
+    f"""<div class="subtitle" style="text-align: center;">Backend Enginer / Data Analyst</div>""",
     unsafe_allow_html=True,
 )
 
