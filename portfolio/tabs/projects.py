@@ -40,12 +40,9 @@ def set_thesis_section():
     with st.container():
         col1, col2 = st.columns(2)
         with col1:
-            ...
-
+            st.markdown(config.html.project_thesis, unsafe_allow_html=True)
         with col2:
-            # st_lottie(config.animations.computer, quality="high")
-
-            ...
+            st_lottie(config.animations.computer, quality="high")
 
 
 def set_portfolio_section():
@@ -53,11 +50,9 @@ def set_portfolio_section():
     with st.container():
         col1, col2 = st.columns(2)
         with col1:
-            ...
-            # st.markdown(config.html.project_bighpc, unsafe_allow_html=True)
+            st.markdown(config.html.project_portfolio, unsafe_allow_html=True)
 
         with col2:
-            ...
-            # st_lottie(config.animations.computer, quality="high")
+            st_lottie(config.animations.computer, quality="high")
 
             # st.markdown(config.html.project_bighpc_video, unsafe_allow_html=True)
