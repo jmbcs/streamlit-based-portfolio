@@ -9,9 +9,10 @@ import portfolio.tabs.projects
 import portfolio.tabs.skills
 
 
-def set_button_bar():
+def set_main_button_bar():
     with st.container():
         selected = option_menu(
+            key="main_menu",
             menu_title=None,
             options=[
                 "About",
@@ -47,7 +48,7 @@ def set_button_bar():
             portfolio.tabs.experience.set_section()
 
         if selected == "Projects":
-            portfolio.tabs.projects.set_section()
+            set_projects_button_bar()
 
         if selected == "Contact":
             portfolio.tabs.contact.set_section()
@@ -109,3 +110,40 @@ def set_tech_stack_icons():
     </div>""",
         unsafe_allow_html=True,
     )
+
+
+def set_projects_button_bar():
+    with st.container():
+        selected = option_menu(
+            key="project_menu",
+            menu_title=None,
+            options=["BigHPC", "Portfolio", "Thesis"],
+            icons=[
+                "code-slash",
+                "code-slash",
+                "code-slash",
+            ],
+            orientation="horizontal",
+            styles={
+                "container": {
+                    "width": "25%",
+                    "height": "25%",
+                    "padding": "0!important",
+                },
+                "nav-link": {
+                    "font-size": "10px",
+                    "text-align": "center",
+                    "--hover-color": "#787777",
+                },
+                "nav-link-selected": {"background-color": "#e06363"},
+            },
+        )
+
+        if selected == "Thesis":
+            portfolio.tabs.projects.set_thesis_section()
+
+        if selected == "BigHPC":
+            portfolio.tabs.projects.set_bighpc_section()
+
+        if selected == "Portfolio":
+            portfolio.tabs.projects.set_portfolio_section()
