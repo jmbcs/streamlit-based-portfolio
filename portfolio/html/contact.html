@@ -6,6 +6,7 @@
     <style>
       body {
         margin-top: 20px; /* Adjust the value as needed */
+        margin-bottom: 20px;
       }
     </style>
   </head>
@@ -17,16 +18,11 @@
       style="margin-left: 215px"
     >
       <input type="hidden" name="_captcha" value="false" />
-      <input
-        type="text"
-        name="name"
-        placeholder="Your name (Required)"
-        required
-      />
+      <input type="text" name="name" placeholder="Name (Required)" required />
       <input
         type="email"
         name="email"
-        placeholder="Your email (Required)"
+        placeholder="Email (Required)"
         required
       />
       <input
@@ -35,7 +31,7 @@
         placeholder="Company (Required)"
         required
       />
-      <textarea name="message" placeholder="Your message here"></textarea>
+      <textarea name="message" placeholder="Message"></textarea>
       <button type="submit">Send</button>
     </form>
   </body>
