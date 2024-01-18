@@ -122,3 +122,7 @@ header {
 footer {
   visibility: hidden;
 }
+lottie-player {
+  display: block;
+  margin: 0 auto;
+}
