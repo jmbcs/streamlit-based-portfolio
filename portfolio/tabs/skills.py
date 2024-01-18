@@ -9,7 +9,7 @@ def __insert_skill(skill_type: str, skills: str):
     col1, col2 = st.columns([1, 2])
     with col1:
         st.markdown(
-            f"<div style='margin-left: 220px; line-height: 2.5; white-space: nowrap;'><strong>{skill_type}</strong> </div>",
+            f"<div style='margin-left: 11vw; font-size: 14px; line-height: 2.5; white-space: nowrap;'><strong>{skill_type}</strong> </div>",
             unsafe_allow_html=True,
         )
 
@@ -26,7 +26,7 @@ def __insert_skill(skill_type: str, skills: str):
         )
 
         st.markdown(
-            f"<div style='margin-left: 215px;'>{skill_snippets}</div>",
+            f"<div style='margin-left: 11vw;'>{skill_snippets}</div>",
             unsafe_allow_html=True,
         )
 
@@ -40,7 +40,7 @@ def set_section():
         with col1:
             st.markdown(
                 """
-                <h2 style='margin-left: 215px;'>Tech Stack</h2>
+                <h2 style='margin-left: 11vw;'>Tech Stack</h2>
                 """,
                 unsafe_allow_html=True,
             )
@@ -49,7 +49,7 @@ def set_section():
 
             st.markdown(
                 """
-                <h2 style='margin-left: 215px;'>Tech Skills</h2>
+                <h2 style='margin-left: 11vw;'>Tech Skills</h2>
                 """,
                 unsafe_allow_html=True,
             )
@@ -65,7 +65,7 @@ def set_section():
 
             st.markdown(
                 """
-                <h2 style='margin-left: 215px;'> Python Skills</h2>
+                <h2 style='margin-left: 11vw;'> Python Skills</h2>
                 """,
                 unsafe_allow_html=True,
             )
