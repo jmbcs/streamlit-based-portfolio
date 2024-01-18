@@ -30,19 +30,31 @@ def set_button_bar():
                 "chat-left-text-fill",
             ],
             orientation="horizontal",
+            styles={
+                "container": {"width": "80%"},
+                "nav-link": {
+                    "font-size": "15px",
+                    "text-align": "center",
+                    "margin": "5px",
+                    "--hover-color": "#787777",
+                },
+                "nav-link-selected": {
+                    "margin": "5px",
+                },
+            },
         )
 
         if selected == "About":
             portfolio.tabs.about.set_section()
+
+        if selected == "Work Experience":
+            portfolio.tabs.experience.set_section()
 
         if selected == "Projects & Papers":
             portfolio.tabs.projects.set_section()
 
         if selected == "Contact":
             portfolio.tabs.contact.set_section()
-
-        if selected == "Work Experience":
-            portfolio.tabs.experience.set_section()
 
         if selected == "Technical Skills":
             portfolio.tabs.skills.set_section()
