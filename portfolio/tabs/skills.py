@@ -9,7 +9,7 @@ def __insert_skill(skill_type: str, skills: str):
     col1, col2 = st.columns([1, 2])
     with col1:
         st.markdown(
-            f"<div style='margin-left: 12.5vw; margin-bottom: 1vh; font-size: 14px; line-height: 2.5; white-space: nowrap;'><strong>{skill_type}</strong> </div>",
+            f"<div style='margin-left: 12.5vw; margin-right: 12.5vw; margin-bottom: 1vh; font-size: 14px; line-height: 2.5; white-space: nowrap;'><strong>{skill_type}</strong> </div>",
             unsafe_allow_html=True,
         )
 
@@ -26,7 +26,7 @@ def __insert_skill(skill_type: str, skills: str):
         )
 
         st.markdown(
-            f"<div style='margin-left: 11vw; margin-bottom: 3vh'>{skill_snippets}</div>",
+            f"<div style='margin-left: 12.5vw; margin-bottom: 3vh'>{skill_snippets}</div>",
             unsafe_allow_html=True,
         )
 
