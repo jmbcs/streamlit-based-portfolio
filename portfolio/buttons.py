@@ -31,7 +31,7 @@ def set_button_bar():
             ],
             orientation="horizontal",
             styles={
-                "container": {"width": "80%"},
+                "container": {"width": "75%"},
                 "nav-link": {
                     "font-size": "15px",
                     "text-align": "center",
@@ -102,7 +102,7 @@ def set_tech_stack_icons():
         "PostgreSQL": "https://cdn-icons-png.flaticon.com/512/5968/5968342.png",
     }
     tech_stack_icons_html = [
-        f"<img class='tech-stack-icon' src='{tech_stack_icons_data[tech]}' alt='{tech}'style='width: 5.5%; height: auto; {'margin-left: 10.5vw; margin-bottom:10px;  margin-top:10px' if tech == list(tech_stack_icons_data.keys())[0] else 'margin-left: 2vw;  margin-bottom:10px; margin-top:10px'}'>"
+        f"<img class='tech-stack-icon' src='{tech_stack_icons_data[tech]}' alt='{tech}'style='width: 5.5%; height: auto; {'margin-left: 12.5vw; margin-bottom:10px;  margin-top:10px' if tech == list(tech_stack_icons_data.keys())[0] else 'margin-left: 2vw;  margin-bottom:10px; margin-top:10px'}'>"
         for tech in tech_stack_icons_data
     ]
 
