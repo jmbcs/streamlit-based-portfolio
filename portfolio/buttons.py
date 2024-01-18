@@ -15,9 +15,9 @@ def set_button_bar():
             menu_title=None,
             options=[
                 "About",
-                "Work Experience",
-                "Technical Skills",
-                "Projects & Papers",
+                "Work",
+                "Skills",
+                "Projects",
                 "Curriculum",
                 "Contact",
             ],
@@ -31,15 +31,11 @@ def set_button_bar():
             ],
             orientation="horizontal",
             styles={
-                "container": {"width": "75%"},
+                "container": {"width": "75%", "padding": "0!important"},
                 "nav-link": {
                     "font-size": "15px",
                     "text-align": "center",
-                    "margin": "5px",
                     "--hover-color": "#787777",
-                },
-                "nav-link-selected": {
-                    "margin": "5px",
                 },
             },
         )
@@ -47,16 +43,16 @@ def set_button_bar():
         if selected == "About":
             portfolio.tabs.about.set_section()
 
-        if selected == "Work Experience":
+        if selected == "Work":
             portfolio.tabs.experience.set_section()
 
-        if selected == "Projects & Papers":
+        if selected == "Projects":
             portfolio.tabs.projects.set_section()
 
         if selected == "Contact":
             portfolio.tabs.contact.set_section()
 
-        if selected == "Technical Skills":
+        if selected == "Skills":
             portfolio.tabs.skills.set_section()
 
         if selected == "Curriculum":
