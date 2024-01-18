@@ -11,7 +11,7 @@ def set_section():
         with col1:
             st.markdown(
                 """
-                <h2 style='margin-left: 11.5vw;'>Tech Stack</h2>
+                <h2 style='margin-left: 11.5vw;'>Main Tech Stack</h2>
                 """,
                 unsafe_allow_html=True,
             )

@@ -35,7 +35,7 @@ def run():
 
     st.markdown(config.html.divider, unsafe_allow_html=True)
 
-    portfolio.buttons.set_button_bar()
+    portfolio.buttons.set_main_button_bar()
 
     st.markdown(config.html.divider, unsafe_allow_html=True)
 
