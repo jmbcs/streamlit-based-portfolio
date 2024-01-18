@@ -32,6 +32,14 @@ class Htmltext(BaseModel):
     title: str = get_html_string(Path("portfolio/html/title.html"))
     footer: str = get_html_string(Path("portfolio/html/footer.html"))
     skills: str = get_html_string(Path("portfolio/html/skills.html"))
+    project_bighpc: str = get_html_string(Path("portfolio/html/project_bighpc.html"))
+    project_thesis: str = get_html_string(Path("portfolio/html/project_thesis.html"))
+    project_portfolio: str = get_html_string(
+        Path("portfolio/html/project_portfolio.html")
+    )
+    project_bighpc_video: str = get_html_string(
+        Path("portfolio/html/project_bighpc_video.html")
+    )
 
 
 class Styles(BaseModel):
