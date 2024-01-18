@@ -31,6 +31,7 @@ class Htmltext(BaseModel):
     subtitle: str = get_html_string(Path("portfolio/html/subtitle.html"))
     title: str = get_html_string(Path("portfolio/html/title.html"))
     footer: str = get_html_string(Path("portfolio/html/footer.html"))
+    skills: str = get_html_string(Path("portfolio/html/skills.html"))
 
 
 class Styles(BaseModel):

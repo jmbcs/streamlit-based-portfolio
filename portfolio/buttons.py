@@ -101,15 +101,14 @@ def set_tech_stack_icons():
         "GitHub": "https://static-00.iconduck.com/assets.00/github-icon-512x497-oppthre2.png",
         "PostgreSQL": "https://cdn-icons-png.flaticon.com/512/5968/5968342.png",
     }
-
     tech_stack_icons_html = [
-        f"<img class='tech-stack-icon' src='{tech_stack_icons_data[tech]}' alt='{tech}' style='width: 40px; height: 40px; margin-left: 15px ; margin-right: 15px;'>"
+        f"<img class='tech-stack-icon' src='{tech_stack_icons_data[tech]}' alt='{tech}'style='width: 5.5%; height: auto; {'margin-left: 10.5vw; margin-bottom:10px;  margin-top:10px' if tech == list(tech_stack_icons_data.keys())[0] else 'margin-left: 2vw;  margin-bottom:10px; margin-top:10px'}'>"
         for tech in tech_stack_icons_data
     ]
 
     st.write(
         f"""
-    <div style="display: flex; justify-content: center; margin-bottom: 0px; ">
+    <div style="display: flex; justify-content: left; margin-bottom: 0px; ">
         {''.join(tech_stack_icons_html)}
     </div>""",
         unsafe_allow_html=True,
