@@ -9,7 +9,7 @@ def __insert_skill(skill_type: str, skills: str):
     col1, col2 = st.columns([1, 2])
     with col1:
         st.markdown(
-            f"<div style='margin-left: 220px; font-size: 14px; line-height: 2.5; white-space: nowrap;'><strong>{skill_type}</strong> </div>",
+            f"<div style='margin-left: 220px; line-height: 2.5; white-space: nowrap;'><strong>{skill_type}</strong> </div>",
             unsafe_allow_html=True,
         )
 
