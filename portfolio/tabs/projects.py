@@ -10,4 +10,4 @@ def set_section():
             ...
 
         with col2:
-            st_lottie(config.animations.computer, height=550, width=780)
+            st_lottie(config.animations.computer, quality="high")
