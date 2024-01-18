@@ -79,4 +79,4 @@ def set_section():
             __insert_skill("Computer Vision", "ImageAI, OpenCV, Ultralytics")
 
         with col2:
-            st_lottie(config.animations.skills, height=650, width=650)
+            st_lottie(config.animations.skills)

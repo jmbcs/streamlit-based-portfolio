@@ -14,4 +14,4 @@ def set_section():
                 unsafe_allow_html=True,
             )
         with col2:
-            st_lottie(config.animations.experience, height=500, width=600)
+            st_lottie(config.animations.experience, quality="high")
