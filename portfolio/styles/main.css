@@ -13,10 +13,6 @@
   margin-bottom: 10px;
 }
 
-.st-expander {
-  width: 400px; /* Set the desired width in pixels */
-}
-
 .subtitle {
   font-size: 1.5em;
   font-weight: 500;
@@ -29,6 +25,12 @@
   height: 25px;
   margin-top: 10px;
   margin-right: 10px;
+}
+
+[data-testid="collapsedControl"] svg {
+  fill: red; /* Fill color for the SVG */
+  width: 50px; /* Width of the SVG - adjust as needed */
+  height: 50px; /* Height of the SVG - adjust as needed */
 }
 
 ul {

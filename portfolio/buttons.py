@@ -8,7 +8,7 @@ def set_main_button_bar():
     with st.sidebar:
         with st.container():
             selected = option_menu(
-                menu_title="Selection",
+                menu_title="Menu",
                 menu_icon="cast",
                 key="main_menu",
                 options=[
