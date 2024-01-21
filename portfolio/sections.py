@@ -7,28 +7,6 @@ from streamlit_lottie import st_lottie
 import portfolio.style
 
 
-def __get_pdf_display() -> str:
-    url_link = (
-        "https://github.com/jmbcs/portfolio/blob/main/portfolio/docs/cv_julio_silva.pdf"
-    )
-    with open(config.curriculum_path, "rb") as f:
-        base64_pdf = base64.b64encode(f.read()).decode("utf-8")
-
-    pdf_display = f"""<object data="data:application/pdf;base64, {base64_pdf}" 
-                          type="application/pdf" 
-                          style="margin-right: 6.5%; margin-left : 6.5%; display: block; width: 80%; min-height:500px; height: auto; aspect-ratio: 1.25/1; text-align: center;">
-                          <p style="text-align: center;">Your browser does not support embedded PDF files.</p> 
-                          <p style="text-align: center;">You can download my curriculum <a href="{url_link}" style="color: #ff4c4c;" target="_blank">here</a> instead.</p>
-
-                      </object>
-                  """
-
-    return pdf_display
-
-
-pdf_display = __get_pdf_display()
-
-
 def set_about_section():
     with st.container():
         col1, col2 = st.columns(2)
@@ -54,7 +32,7 @@ def set_contact_ection():
 
 
 def set_curriculum_section():
-    st.markdown(pdf_display, unsafe_allow_html=True)
+    st.markdown(config.html.section_curriculum, unsafe_allow_html=True)
 
 
 def set_experience_section():

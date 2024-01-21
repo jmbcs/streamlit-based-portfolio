@@ -33,6 +33,9 @@ class Htmltext(BaseModel):
     section_experience: str = get_html_string(
         Path(f"{HTML_PATH}/section_experience.html")
     )
+    section_curriculum: str = get_html_string(
+        Path(f"{HTML_PATH}/section_curriculum.html")
+    )
     structure_divider: str = get_html_string(
         Path(f"{HTML_PATH}/structure_divider.html")
     )
