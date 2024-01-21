@@ -3,6 +3,10 @@ from pathlib import Path
 
 from pydantic import BaseModel
 
+HTML_PATH = "portfolio/html"
+ANIMATION_PATH = "portfolio/animation"
+STYLES_PATH = "portfolio/styles"
+
 
 def get_animation_json(path: Path) -> dict:
     with open(path, mode="r") as source:
@@ -15,36 +19,46 @@ def get_html_string(path: Path) -> str:
 
 
 class Animations(BaseModel):
-    about: dict = get_animation_json(Path("portfolio/animation/about.json"))
-    computer: dict = get_animation_json(Path("portfolio/animation/computer.json"))
-    contact: dict = get_animation_json(Path("portfolio/animation/contact.json"))
-    experience: dict = get_animation_json(Path("portfolio/animation/experience.json"))
-    skills: dict = get_animation_json(Path("portfolio/animation/skills.json"))
+    about: dict = get_animation_json(Path(f"{ANIMATION_PATH}/about.json"))
+    computer: dict = get_animation_json(Path(f"{ANIMATION_PATH}/computer.json"))
+    contact: dict = get_animation_json(Path(f"{ANIMATION_PATH}/contact.json"))
+    experience: dict = get_animation_json(Path(f"{ANIMATION_PATH}/experience.json"))
+    skills: dict = get_animation_json(Path(f"{ANIMATION_PATH}/skills.json"))
 
 
 class Htmltext(BaseModel):
-    about: str = get_html_string(Path("portfolio/html/about.html"))
-    style: str = get_html_string(Path("portfolio/html/style.html"))
-    contact_form: str = get_html_string(Path("portfolio/html/contact.html"))
-    experience: str = get_html_string(Path("portfolio/html/experience.html"))
-    divider: str = get_html_string(Path("portfolio/html/divider.html"))
-    subtitle: str = get_html_string(Path("portfolio/html/subtitle.html"))
-    title: str = get_html_string(Path("portfolio/html/title.html"))
-    footer: str = get_html_string(Path("portfolio/html/footer.html"))
-    skills: str = get_html_string(Path("portfolio/html/skills.html"))
-    project_bighpc: str = get_html_string(Path("portfolio/html/project_bighpc.html"))
-    project_thesis: str = get_html_string(Path("portfolio/html/project_thesis.html"))
-    project_portfolio: str = get_html_string(
-        Path("portfolio/html/project_portfolio.html")
+    section_about: str = get_html_string(Path(f"{HTML_PATH}/section_about.html"))
+    stucture_style: str = get_html_string(Path(f"{HTML_PATH}/stucture_style.html"))
+    section_contact: str = get_html_string(Path(f"{HTML_PATH}/section_contact.html"))
+    section_experience: str = get_html_string(
+        Path(f"{HTML_PATH}/section_experience.html")
     )
-    project_bighpc_video: str = get_html_string(
-        Path("portfolio/html/project_bighpc_video.html")
+    structure_divider: str = get_html_string(
+        Path(f"{HTML_PATH}/structure_divider.html")
     )
-    buttons_social: str = get_html_string(Path("portfolio/html/buttons_social.html"))
-    tech_stack: str = get_html_string(Path("portfolio/html/tech_stack.html"))
+    structure_subtitle: str = get_html_string(
+        Path(f"{HTML_PATH}/structure_subtitle.html")
+    )
+    structure_title: str = get_html_string(Path(f"{HTML_PATH}/structure_title.html"))
+    structure_footer: str = get_html_string(Path(f"{HTML_PATH}/structure_footer.html"))
+    section_skills: str = get_html_string(Path(f"{HTML_PATH}/section_skills.html"))
+    section_project_bighpc: str = get_html_string(
+        Path(f"{HTML_PATH}/section_project_bighpc.html")
+    )
+    section_project_thesis: str = get_html_string(
+        Path(f"{HTML_PATH}/section_project_thesis.html")
+    )
+    section_project_portfolio: str = get_html_string(
+        Path(f"{HTML_PATH}/section_project_portfolio.html")
+    )
+    project_bighpc_video: str = get_html_string(Path(f"{HTML_PATH}/video_bighpc.html"))
+
+    structure_tech_stack: str = get_html_string(
+        Path(f"{HTML_PATH}/structure_tech_stack.html")
+    )
 
 
 class Styles(BaseModel):
-    main: Path = Path("portfolio/styles/main.css")
-    form: Path = Path("portfolio/styles/form.css")
-    lottie: Path = Path("portfolio/styles/lottie.css")
+    form: Path = Path(f"{STYLES_PATH}/form.css")
+    lottie: Path = Path(f"{STYLES_PATH}/lottie.css")
+    main: Path = Path(f"{STYLES_PATH}/main.css")
