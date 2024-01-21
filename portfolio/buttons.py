@@ -53,7 +53,7 @@ def set_main_button_bar():
             set_projects_button_bar()
 
         if selected == "Contact":
-            portfolio.sections.set_contact_ection()
+            portfolio.sections.set_contact_section()
 
         if selected == "Skills":
             portfolio.sections.set_skilsl_section()
