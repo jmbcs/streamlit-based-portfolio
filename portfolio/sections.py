@@ -14,11 +14,14 @@ def __get_pdf_display() -> str:
     with open(config.curriculum_path, "rb") as f:
         base64_pdf = base64.b64encode(f.read()).decode("utf-8")
 
-    pdf_display = f"""<object data="data:application/pdf;base64, {base64_pdf}" type="application/pdf" style="margin-left: auto; margin-right: auto; display: flex; text-align: center;" width="600" height="800">
-                            <p style="text-align: center;">Your browser does not support embedded PDF files.</p> 
-                            <p style="text-align: center;">You can download my curriculum <a href="{url_link}" style="color: #ff4c4c;" target="_blank">here</a> instead.</p>
-                        </object>
-                        """
+    pdf_display = f"""<object data="data:application/pdf;base64, {base64_pdf}" 
+                          type="application/pdf" 
+                          style="margin-left: auto; margin-right: auto; display: block; width: 75%; min-height:100% height: auto; aspect-ratio: 1/1;">
+                          <p style="text-align: center;">Your browser does not support embedded PDF files.</p> 
+                          <p style="text-align: center;">You can download my curriculum <a href="{url_link}" style="color: #ff4c4c;" target="_blank">here</a> instead.</p>
+
+                      </object>
+                  """
 
     return pdf_display
 
