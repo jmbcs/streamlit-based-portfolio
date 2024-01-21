@@ -13,6 +13,10 @@
   margin-bottom: 10px;
 }
 
+.st-expander {
+  width: 400px; /* Set the desired width in pixels */
+}
+
 .subtitle {
   font-size: 1.5em;
   font-weight: 500;

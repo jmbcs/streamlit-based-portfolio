@@ -5,98 +5,61 @@ import portfolio.sections
 
 
 def set_main_button_bar():
-    with st.container():
-        selected = option_menu(
-            key="main_menu",
-            menu_title=None,
-            options=[
-                "About",
-                "Work",
-                "Skills",
-                "Projects",
-                "Curriculum",
-                "Contact",
-            ],
-            icons=[
-                "person",
-                "briefcase",
-                "wrench",
-                "code-slash",
-                "book",
-                "chat-left-text-fill",
-            ],
-            orientation="horizontal",
-            styles={
-                "icon": {"color": "white"},
-                "container": {
-                    "width": "75%",
-                    "padding": "0!important",
-                    "white-space": "nowrap",
+    with st.sidebar:
+        with st.container():
+            selected = option_menu(
+                menu_title="Selection",
+                menu_icon="cast",
+                key="main_menu",
+                options=[
+                    "About",
+                    "Work",
+                    "Skills",
+                    "Projects",
+                    "Curriculum",
+                    "Contact",
+                ],
+                icons=[
+                    "person",
+                    "briefcase",
+                    "wrench",
+                    "code-slash",
+                    "book",
+                    "chat-left-text-fill",
+                ],
+                orientation="vertical",
+                styles={
+                    "icon": {"color": "white"},
+                    "container": {
+                        "padding": "10px",
+                        "white-space": "nowrap",
+                        "font-color": "#000000",
+                    },
+                    "nav-link": {
+                        "font-size": "20px",
+                        "text-align": "left",
+                        "--hover-color": "#383838",
+                        "white-space": "nowrap",  # Prevent text wrapping
+                        "font-color": "#000000",
+                    },
+                    "nav-link-selected": {"background-color": "#ff4c4c"},
                 },
-                "nav-link": {
-                    "font-size": "14px",
-                    "text-align": "center",
-                    "--hover-color": "#383838",
-                    "white-space": "nowrap",  # Prevent text wrapping
-                },
-                "nav-link-selected": {"background-color": "#ff4c4c"},
-            },
-        )
+            )
 
-        if selected == "About":
-            portfolio.sections.set_about_section()
+    if selected == "About":
+        portfolio.sections.set_about_section()
 
-        if selected == "Work":
-            portfolio.sections.set_experience_section()
+    if selected == "Work":
+        portfolio.sections.set_experience_section()
 
-        if selected == "Projects":
-            set_projects_button_bar()
+    if selected == "Projects":
+        portfolio.sections.set_projects_section()
 
-        if selected == "Contact":
-            portfolio.sections.set_contact_section()
+    if selected == "Contact":
+        portfolio.sections.set_contact_section()
 
-        if selected == "Skills":
-            portfolio.sections.set_skilsl_section()
+    if selected == "Skills":
+        portfolio.sections.set_skilsl_section()
 
-        if selected == "Curriculum":
-            portfolio.sections.set_curriculum_section()
-
-
-def set_projects_button_bar():
-    with st.container():
-        selected = option_menu(
-            key="project_menu",
-            menu_title=None,
-            options=["BigHPC", "Portfolio", "Thesis"],
-            icons=[
-                "code-slash",
-                "code-slash",
-                "code-slash",
-            ],
-            orientation="horizontal",
-            styles={
-                "icon": {"color": "white"},
-                "container": {
-                    "width": "25%",
-                    "height": "25%",
-                    "padding": "0!important",
-                    "white-space": "nowrap",  # Prevent text wrapping
-                },
-                "nav-link": {
-                    "font-size": "10px",
-                    "text-align": "center",
-                    "--hover-color": "#383838",
-                    "white-space": "nowrap",  # Prevent text wrapping
-                },
-                "nav-link-selected": {"background-color": "#e06363"},
-            },
-        )
-
-        if selected == "Thesis":
-            portfolio.sections.set_projects_section(project="THESIS")
-
-        if selected == "BigHPC":
-            portfolio.sections.set_projects_section(project="BIGHPC")
-
-        if selected == "Portfolio":
-            portfolio.sections.set_projects_section(project="PORTFOLIO")
+    if selected == "Curriculum":
+        portfolio.sections.set_curriculum_section()
