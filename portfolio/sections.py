@@ -8,12 +8,17 @@ import portfolio.style
 
 
 def __get_pdf_display() -> str:
+    url_link = (
+        "https://github.com/jmbcs/portfolio/blob/main/portfolio/docs/cv_julio_silva.pdf"
+    )
     with open(config.curriculum_path, "rb") as f:
         base64_pdf = base64.b64encode(f.read()).decode("utf-8")
 
     # pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="75%" height=1080 type="application/pdf" style="margin-left: 11.5vw; margin-right: 11.5vw;">'
 
-    pdf_display = f"""<object data="data:application/pdf;base64, {base64_pdf}" type="application/pdf" width="75%" height="1080" style="margin-left: 11.5vw; margin-right: 11.5vw;"> <p>Your browser does not support embedded PDF files. You can <a href="data:application/pdf;base64,{base64_pdf}">download the PDF</a> instead.</p></object>"""
+    pdf_display = f"""<object data="data:application/pdf;base64, {base64_pdf}" type="application/pdf" width="75%" height="1080" style="margin-left: 11.5vw; margin-right: 11.5vw;">
+  <p>Your browser does not support embedded PDF files. You can download my curriculum <a href="data:application/pdf;base64,{url_link}" style="color: #ff4c4c;">here</a> instead.</p>
+</object>"""
 
     return pdf_display
 
