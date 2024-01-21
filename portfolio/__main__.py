@@ -1,4 +1,12 @@
+import os
+import sys
+
 import streamlit as st
+
+# required to deploy app in streamlit
+current = os.path.dirname(os.path.realpath(__file__))
+parent = os.path.dirname(current)
+sys.path.append(parent)
 
 import portfolio.buttons
 import portfolio.image
