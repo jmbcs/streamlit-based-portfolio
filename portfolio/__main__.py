@@ -1,6 +1,5 @@
 import os
-
-import st
+import sys
 
 # required to deploy app in streamlit
 current = os.path.dirname(os.path.realpath(__file__))
