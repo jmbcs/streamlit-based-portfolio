@@ -16,7 +16,7 @@ def __get_pdf_display() -> str:
 
     pdf_display = f"""<object data="data:application/pdf;base64, {base64_pdf}" 
                           type="application/pdf" 
-                          style="margin-right: 11.5%; margin-left : 11.5%; display: block; width: 70%; min-height:500px; height: auto; aspect-ratio: 1.25/1; text-align: center;">
+                          style="margin-right: 6.5%; margin-left : 6.5%; display: block; width: 80%; min-height:500px; height: auto; aspect-ratio: 1.25/1; text-align: center;">
                           <p style="text-align: center;">Your browser does not support embedded PDF files.</p> 
                           <p style="text-align: center;">You can download my curriculum <a href="{url_link}" style="color: #ff4c4c;" target="_blank">here</a> instead.</p>
 
