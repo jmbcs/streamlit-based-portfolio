@@ -11,6 +11,5 @@ help: ## Show this help
 clean: ## Clean repo
 	@find . -type d \( -name "__pycache__" -o -name ".mypy_cache" -o -name ".pytest_cache" -o -name ".coverage" -o -name "*.egg-info" -o -name ".tox" -o -name ".venv" -o -name "build" -o -name "dist" \) -exec rm -rf {} +
 
-
-streamlit:
-	@streamlit run /home/julio/PrivateProjects/portfolio/portfolio/__main__.py
+run:
+	@streamlit run portfolio/__main__.py
