@@ -17,7 +17,10 @@ from portfolio.settings import config
 
 def run():
     st.set_page_config(
-        page_title="Portfolio - Júlio Silva", page_icon="💼", layout="wide"
+        page_title="Portfolio - Júlio Silva",
+        page_icon="💼",
+        layout="wide",
+        initial_sidebar_state="expanded",
     )
     # set the styles
     portfolio.style.set_style(path_to_style=config.styles.main)
