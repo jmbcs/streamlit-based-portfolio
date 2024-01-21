@@ -28,7 +28,7 @@
 }
 
 [data-testid="collapsedControl"] svg {
-  fill: ff4c4c; /* Fill color for the SVG */
+  fill: #ff4c4c; /* Fill color for the SVG */
   width: 50px; /* Width of the SVG - adjust as needed */
   height: 50px; /* Height of the SVG - adjust as needed */
 }
