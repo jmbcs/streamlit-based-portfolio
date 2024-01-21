@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#1a1a1a"  # Dark background color
+backgroundColor = "#121212"  # Slightly lighter background color
+secondaryBackgroundColor = "#212121"  # Accent color
+textColor = "#777777"  # Text color
+font = "sans serif"

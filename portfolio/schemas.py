@@ -40,6 +40,8 @@ class Htmltext(BaseModel):
     project_bighpc_video: str = get_html_string(
         Path("portfolio/html/project_bighpc_video.html")
     )
+    buttons_social: str = get_html_string(Path("portfolio/html/buttons_social.html"))
+    tech_stack: str = get_html_string(Path("portfolio/html/tech_stack.html"))
 
 
 class Styles(BaseModel):
