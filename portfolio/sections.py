@@ -20,7 +20,7 @@ def set_about_section():
             st_lottie(config.animations.about, quality="high")
 
 
-def set_contact_ection():
+def set_contact_section():
     with st.container():
         col1, col2 = st.columns(2)
         with col1:
