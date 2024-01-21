@@ -29,7 +29,8 @@ def run():
         unsafe_allow_html=True,
     )
 
-    portfolio.buttons.set_social_icons()
+    # portfolio.buttons.set_tech_stack_icons()
+    st.markdown(config.html.tech_stack, unsafe_allow_html=True)
 
     # Displaying Markdown with icons
 

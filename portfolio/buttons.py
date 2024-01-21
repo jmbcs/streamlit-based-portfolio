@@ -7,6 +7,7 @@ import portfolio.tabs.curriculum
 import portfolio.tabs.experience
 import portfolio.tabs.projects
 import portfolio.tabs.skills
+from portfolio.settings import config
 
 
 def set_main_button_bar():
@@ -32,12 +33,14 @@ def set_main_button_bar():
             ],
             orientation="horizontal",
             styles={
+                "icon": {"color": "white"},
                 "container": {"width": "75%", "padding": "0!important"},
                 "nav-link": {
                     "font-size": "15px",
                     "text-align": "center",
-                    "--hover-color": "#787777",
+                    "--hover-color": "#383838",
                 },
+                "nav-link-selected": {"background-color": "#ff4c4c"},
             },
         )
 
@@ -60,58 +63,6 @@ def set_main_button_bar():
             portfolio.tabs.curriculum.set_section()
 
 
-def set_social_icons():
-    # Social Icons
-    social_icons_data = {
-        # Platform: [URL, Icon]
-        "LinkedIn": [
-            "https://www.linkedin.com/in/julio-miguel-silva/",
-            "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-        ],
-        "GitHub": [
-            "https://github.com/jmbcs",
-            "https://static-00.iconduck.com/assets.00/github-icon-512x497-oppthre2.png",
-        ],
-    }
-
-    social_icons_html = [
-        f"<a href='{social_icons_data[platform][0]}' target='_blank' style='margin-right: 15px;'><img class='social-icon' src='{social_icons_data[platform][1]}' alt='{platform}' style='width: 25px; height: 25px;'></a>"
-        for platform in social_icons_data
-    ]
-
-    st.write(
-        f"""
-    <div style="display: flex; justify-content: center; margin-bottom: 0px;">
-        {''.join(social_icons_html)}
-    </div>""",
-        unsafe_allow_html=True,
-    )
-
-
-def set_tech_stack_icons():
-    # Tech Stack Icons
-    tech_stack_icons_data = {
-        "Python": "https://img.icons8.com/color/96/000000/python.png",
-        "Grafana": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg",
-        "Prometheus": "https://static-00.iconduck.com/assets.00/prometheus-icon-2047x2048-b3aicxlu.png",
-        "Docker": "https://www.svgrepo.com/download/331370/docker.svg",
-        "GitHub": "https://static-00.iconduck.com/assets.00/github-icon-512x497-oppthre2.png",
-        "PostgreSQL": "https://cdn-icons-png.flaticon.com/512/5968/5968342.png",
-    }
-    tech_stack_icons_html = [
-        f"<img class='tech-stack-icon' src='{tech_stack_icons_data[tech]}' alt='{tech}'style='width: 5.5%; height: auto; {'margin-left: 12.5vw; margin-bottom:10px;  margin-top:10px' if tech == list(tech_stack_icons_data.keys())[0] else 'margin-left: 2vw;  margin-bottom:10px; margin-top:10px'}'>"
-        for tech in tech_stack_icons_data
-    ]
-
-    st.write(
-        f"""
-    <div style="display: flex; justify-content: left; margin-bottom: 0px; ">
-        {''.join(tech_stack_icons_html)}
-    </div>""",
-        unsafe_allow_html=True,
-    )
-
-
 def set_projects_button_bar():
     with st.container():
         selected = option_menu(
@@ -125,6 +76,7 @@ def set_projects_button_bar():
             ],
             orientation="horizontal",
             styles={
+                "icon": {"color": "white"},
                 "container": {
                     "width": "25%",
                     "height": "25%",
@@ -133,7 +85,7 @@ def set_projects_button_bar():
                 "nav-link": {
                     "font-size": "10px",
                     "text-align": "center",
-                    "--hover-color": "#787777",
+                    "--hover-color": "#383838",
                 },
                 "nav-link-selected": {"background-color": "#e06363"},
             },
