@@ -28,11 +28,16 @@ def set_main_button_bar():
             orientation="horizontal",
             styles={
                 "icon": {"color": "white"},
-                "container": {"width": "75%", "padding": "0!important"},
+                "container": {
+                    "width": "75%",
+                    "height": "50%",
+                    "padding": "0",
+                },
                 "nav-link": {
                     "font-size": "15px",
                     "text-align": "center",
                     "--hover-color": "#383838",
+                    "margin": "0px",
                 },
                 "nav-link-selected": {"background-color": "#ff4c4c"},
             },
@@ -74,12 +79,13 @@ def set_projects_button_bar():
                 "container": {
                     "width": "25%",
                     "height": "25%",
-                    "padding": "0!important",
+                    "padding": "0",
                 },
                 "nav-link": {
                     "font-size": "10px",
                     "text-align": "center",
                     "--hover-color": "#383838",
+                    "margin": "0px",
                 },
                 "nav-link-selected": {"background-color": "#e06363"},
             },
