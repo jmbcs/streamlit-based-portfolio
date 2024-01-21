@@ -15,7 +15,7 @@ def __get_pdf_display() -> str:
         base64_pdf = base64.b64encode(f.read()).decode("utf-8")
 
     pdf_display = f"""<div style="text-align: center;">
-                        <object data="data:application/pdf;base64, {base64_pdf}" type="application/pdf" width="750vw" height="750vh display: flex;">
+                        <object data="data:application/pdf;base64, {base64_pdf}" type="application/pdf" width="75%"  height="850px" style="margin: 0 auto; display: flex;">
                             <p>Your browser does not support embedded PDF files.</p> 
                             <p>You can download my curriculum <a href="{url_link}" style="color: #ff4c4c;" target="_blank">here</a> instead.</p>
                         </object>
