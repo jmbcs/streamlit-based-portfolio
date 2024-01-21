@@ -1,0 +1,29 @@
+
+[tool.setuptools]
+py-modules = []
+packages = ["portfolio"]
+
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Portfolio"
+description = "My portfolio"
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["Porfolio"]
+version = "1.0.0"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+dynamic = ["dependencies"]
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[project.scripts]
+mv-api = "portfolio.__main__:run"
