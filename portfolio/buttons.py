@@ -34,7 +34,7 @@ def set_main_button_bar():
                     "white-space": "nowrap",
                 },
                 "nav-link": {
-                    "font-size": "15px",
+                    "font-size": "20px",
                     "text-align": "center",
                     "--hover-color": "#383838",
                     "white-space": "nowrap",  # Prevent text wrapping
