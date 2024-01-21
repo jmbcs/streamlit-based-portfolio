@@ -11,7 +11,7 @@ def __get_pdf_display() -> str:
     with open(config.curriculum_path, "rb") as f:
         base64_pdf = base64.b64encode(f.read()).decode("utf-8")
 
-    pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="75%" height=1080 type="application/pdf" style="margin-left: 11.5vw; margin-right: 11.5vw;">'
+    pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="75%" height="1080" style="margin-left: 11.5vw; margin-right: 11.5vw;"></iframe>'
     return pdf_display
 
 
