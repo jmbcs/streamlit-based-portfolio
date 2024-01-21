@@ -41,7 +41,7 @@ def run():
     st.markdown(config.html.structure_tech_stack, unsafe_allow_html=True)
 
     # add a divider
-    st.markdown(config.html.structure_divider, unsafe_allow_html=True)
+    # st.markdown(config.html.structure_divider, unsafe_allow_html=True)
 
     # add button bar and logic for tabs
     portfolio.buttons.set_main_button_bar()

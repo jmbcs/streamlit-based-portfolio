@@ -60,8 +60,8 @@ def set_skilsl_section():
             st_lottie(config.animations.skills, quality="high")
 
 
-def set_projects_section(project: str):
-    if project == "BIGHPC":
+def set_projects_section():
+    with st.expander("Project - BigHPC"):
         with st.container():
             col1, col2 = st.columns(2)
             with col1:
@@ -69,20 +69,20 @@ def set_projects_section(project: str):
 
             with col2:
                 st.markdown(config.html.project_bighpc_video, unsafe_allow_html=True)
-    if project == "THESIS":
+    with st.expander("Project - Thesis"):
         with st.container():
             col1, col2 = st.columns(2)
             with col1:
                 st.markdown(config.html.section_project_thesis, unsafe_allow_html=True)
             with col2:
                 st_lottie(config.animations.computer, quality="high")
-
-    if project == "PORTFOLIO":
+    with st.expander("Project - Porfolio"):
         with st.container():
             col1, col2 = st.columns(2)
             with col1:
                 st.markdown(
-                    config.html.section_project_portfolio, unsafe_allow_html=True
+                    config.html.section_project_portfolio,
+                    unsafe_allow_html=True,
                 )
 
             with col2:
