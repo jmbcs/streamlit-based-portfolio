@@ -1,13 +1,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-import portfolio.tabs.about
-import portfolio.tabs.contact
-import portfolio.tabs.curriculum
-import portfolio.tabs.experience
-import portfolio.tabs.projects
-import portfolio.tabs.skills
-from portfolio.settings import config
+import portfolio.sections
 
 
 def set_main_button_bar():
@@ -45,22 +39,22 @@ def set_main_button_bar():
         )
 
         if selected == "About":
-            portfolio.tabs.about.set_section()
+            portfolio.sections.set_about_section()
 
         if selected == "Work":
-            portfolio.tabs.experience.set_section()
+            portfolio.sections.set_experience_section()
 
         if selected == "Projects":
             set_projects_button_bar()
 
         if selected == "Contact":
-            portfolio.tabs.contact.set_section()
+            portfolio.sections.set_contact_ection()
 
         if selected == "Skills":
-            portfolio.tabs.skills.set_section()
+            portfolio.sections.set_skilsl_section()
 
         if selected == "Curriculum":
-            portfolio.tabs.curriculum.set_section()
+            portfolio.sections.set_curriculum_section()
 
 
 def set_projects_button_bar():
@@ -92,10 +86,10 @@ def set_projects_button_bar():
         )
 
         if selected == "Thesis":
-            portfolio.tabs.projects.set_thesis_section()
+            portfolio.sections.set_projects_section(project="THESIS")
 
         if selected == "BigHPC":
-            portfolio.tabs.projects.set_bighpc_section()
+            portfolio.sections.set_projects_section(project="BIGHPC")
 
         if selected == "Portfolio":
-            portfolio.tabs.projects.set_portfolio_section()
+            portfolio.sections.set_projects_section(project="PORTFOLIO")
