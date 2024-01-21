@@ -1,4 +1,4 @@
-include .env
+
 .PHONY: help
 SHELL := /bin/bash
 current_branch := $(shell git rev-parse --abbrev-ref HEAD)
