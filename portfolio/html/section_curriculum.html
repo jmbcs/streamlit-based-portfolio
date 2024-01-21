@@ -11,37 +11,35 @@
             padding: 0;
         }
 
-        .center-container {
-            text-align: center;
-        }
 
-        iframe {
-            display: flex;
+        .custom-iframe {
+            display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 50%;
-
-            aspect-ratio: 1/1.25;
+            width: 75%;
             border: 0;
-            /* remove iframe border */
+            aspect-ratio: 1/1.25;
+            text-align: center;
+            align-items: center;
+
         }
 
         p {
             text-align: center;
-            margin-top: 10px;
-            /* adjust margin-top */
+            margin-bottom: 20px;
+            align-items: center;
+            margin-left: -1vw;
         }
     </style>
 </head>
 
 <body>
-    <div class="center-container">
-        <iframe
-            src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/jmbcs/curriculum/main/curriculum.pdf&embedded=true"
-            frameborder="0"></iframe>
-        <p>If you can't view the PDF, you can download it <a
-                href="https://raw.githubusercontent.com/jmbcs/curriculum/main/curriculum.pdf" style="color: #ff4c4c;"
-                target="_blank">here</a>.</p>
+    <p>If you can't view the PDF, you can download it <a
+            href="https://raw.githubusercontent.com/jmbcs/curriculum/main/curriculum.pdf" style="color: #ff4c4c;"
+            target="_blank">here</a>.</p>
+    <iframe class="custom-iframe"
+        src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/jmbcs/curriculum/main/curriculum.pdf&embedded=true"
+        frameborder="0"></iframe>
     </div>
 </body>
 
