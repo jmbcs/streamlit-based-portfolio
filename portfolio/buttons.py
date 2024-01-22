@@ -36,6 +36,7 @@ def set_main_button_bar():
                         "padding": "0!important",
                         "white-space": "nowrap",
                         "font-color": "#000000",
+                        "border-radius": "0px",
                     },
                     "nav-link": {
                         "font-size": "15px",
@@ -43,6 +44,7 @@ def set_main_button_bar():
                         "--hover-color": "#383838",
                         "white-space": "nowrap",  # Prevent text wrapping
                         "font-color": "#000000",
+                        "border-radius": "0px",
                     },
                     "nav-link-selected": {"background-color": "#ff4c4c"},
                 },
