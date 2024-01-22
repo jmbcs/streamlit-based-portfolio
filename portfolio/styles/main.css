@@ -41,29 +41,30 @@
 
 [data-testid="collapsedControl"] {
   position: relative;
+  background-color: #212121; /* Adjust the background color as needed */
+  height: 98vh;
+  border-radius: 10px;
 }
 
 [data-testid="collapsedControl"] svg {
   fill: #777777;
   width: 50px;
-  margin-left: 10px;
-  margin-top: 50vh;
-  height: 120vh;
+
+  height: 98vh;
   position: relative;
   z-index: 2;
 }
 
-[data-testid="collapsedControl"]::after {
+/* [data-testid="collapsedControl"]::after {
   content: "Menu";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #777777;
+  color: #ff4c4c;
   font-weight: bold;
   z-index: 1; /* Set a higher z-index to overlay the text on top of the SVG */
-}
-
+/* } */
 ul {
   list-style-type: none;
 }
