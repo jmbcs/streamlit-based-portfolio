@@ -33,8 +33,9 @@
   border: 1px solid #777777;
   border-radius: 30px;
   margin-left: 10px;
+  margin-top: 10px;
   /* transform: translateY(3%); */
-  height: 500px !important;
+  height: 575px !important;
   overflow: hidden;
 }
 
