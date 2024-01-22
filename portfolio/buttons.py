@@ -3,6 +3,8 @@ from streamlit_option_menu import option_menu
 
 import portfolio.sections
 
+transparent_red = (255, 0, 0, 0)
+
 
 def set_main_button_bar():
     with st.sidebar:
@@ -31,12 +33,12 @@ def set_main_button_bar():
                 styles={
                     "icon": {"color": "white"},
                     "container": {
-                        "padding": "10px",
+                        "padding": "30px",
                         "white-space": "nowrap",
                         "font-color": "#000000",
                     },
                     "nav-link": {
-                        "font-size": "20px",
+                        "font-size": "15px",
                         "text-align": "left",
                         "--hover-color": "#383838",
                         "white-space": "nowrap",  # Prevent text wrapping
