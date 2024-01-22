@@ -43,7 +43,7 @@ def set_experience_section():
             st_lottie(config.animations.experience, quality="high")
 
 
-def set_skilsl_section():
+def set_skills_section():
     with st.container():
         col1, col2 = st.columns(2)
         with col1:
