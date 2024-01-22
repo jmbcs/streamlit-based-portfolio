@@ -28,7 +28,8 @@
 }
 
 [data-testid="stSidebar"] {
-  width: 50px !important;
+  width: 35px !important;
+  background-color: rgba(26, 26, 26, 0.75);
 }
 
 [data-testid="collapsedControl"] svg {
