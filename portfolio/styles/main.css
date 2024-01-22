@@ -33,14 +33,14 @@
   border: 1px solid #777777;
   border-radius: 30px;
   margin-left: 10px;
-  margin-top: 27vh;
-  transform: translateY(-50%);
+
+  transform: translateY(1%);
   height: 500px !important;
   overflow: hidden;
 }
 
 [data-testid="collapsedControl"] svg {
-  fill: #ff4c4c; /* Fill color for the SVG */
+  fill: #777777; /* Fill color for the SVG */
   width: 50px; /* Width of the SVG - adjust as needed */
   height: 50px; /* Height of the SVG - adjust as needed */
   margin-left: 10 px;
@@ -50,7 +50,7 @@
   content: "Menu"; /* Text to be added after the SVG */
   position: absolute;
   top: 13px;
-  color: #ff4c4c; /* Adjust the text color as needed */
+  color: #777777; /* Adjust the text color as needed */
   font-weight: bold;
 }
 
