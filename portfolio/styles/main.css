@@ -33,25 +33,35 @@
   border: 0.5px solid #777777;
   border-radius: 25px;
   margin-left: 10px;
-  margin-top: 10px;
-  /* transform: translateY(3%); */
+  margin-top: 25vh;
+  margin-bottom: 25vh;
   height: 575px !important;
   overflow: hidden;
 }
 
+[data-testid="collapsedControl"] {
+  position: relative;
+}
+
 [data-testid="collapsedControl"] svg {
-  fill: #777777; /* Fill color for the SVG */
-  width: 50px; /* Width of the SVG - adjust as needed */
-  height: 50px; /* Height of the SVG - adjust as needed */
-  margin-left: 10 px;
+  fill: #777777;
+  width: 50px;
+  margin-left: 10px;
+  margin-top: 50vh;
+  height: 120vh;
+  position: relative;
+  z-index: 2;
 }
 
 [data-testid="collapsedControl"]::after {
-  content: "Menu"; /* Text to be added after the SVG */
+  content: "Menu";
   position: absolute;
-  top: 13px;
-  color: #777777; /* Adjust the text color as needed */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #777777;
   font-weight: bold;
+  z-index: 1; /* Set a higher z-index to overlay the text on top of the SVG */
 }
 
 ul {
