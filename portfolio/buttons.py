@@ -33,7 +33,7 @@ def set_main_button_bar():
                 styles={
                     "icon": {"color": "white"},
                     "container": {
-                        "padding": "30px",
+                        "padding": "0!important",
                         "white-space": "nowrap",
                         "font-color": "#000000",
                     },
