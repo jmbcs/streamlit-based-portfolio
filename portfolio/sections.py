@@ -22,13 +22,9 @@ def set_about_section():
 
 def set_contact_section():
     with st.container():
-        col1, col2 = st.columns(2)
-        with col1:
-            st.markdown(config.html.section_contact, unsafe_allow_html=True)
+        st.markdown(config.html.section_contact, unsafe_allow_html=True)
 
-            portfolio.style.set_style(path_to_style=config.styles.form)
-        with col2:
-            st_lottie(config.animations.contact, quality="high", speed=2)
+        portfolio.style.set_style(path_to_style=config.styles.form)
 
 
 def set_curriculum_section():
