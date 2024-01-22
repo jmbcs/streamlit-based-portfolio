@@ -34,17 +34,19 @@ def set_main_button_bar():
                     "icon": {"color": "white"},
                     "container": {
                         "padding": "0!important",
+                        "margin-right": "10px",
                         "white-space": "nowrap",
                         "font-color": "#000000",
                         "border-radius": "0!important",
                     },
                     "nav-link": {
+                        "margin-right": "10px",
                         "font-size": "15px",
                         "text-align": "left",
                         "--hover-color": "#383838",
                         "white-space": "nowrap",  # Prevent text wrapping
                         "font-color": "#000000",
-                        "border-radius": "0!important",
+                        "border-radius": "25px",
                     },
                     "nav-link-selected": {"background-color": "#ff4c4c"},
                 },
