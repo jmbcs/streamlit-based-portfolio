@@ -20,7 +20,7 @@ def run():
         page_title="Portfolio - Júlio Silva",
         page_icon="💼",
         layout="wide",
-        initial_sidebar_state="expanded",
+        initial_sidebar_state="collapsed",
     )
 
     # set the styles
