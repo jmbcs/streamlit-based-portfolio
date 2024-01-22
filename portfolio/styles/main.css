@@ -36,6 +36,15 @@
   fill: #ff4c4c; /* Fill color for the SVG */
   width: 50px; /* Width of the SVG - adjust as needed */
   height: 50px; /* Height of the SVG - adjust as needed */
+  margin-left: 10 px;
+}
+
+[data-testid="collapsedControl"]::after {
+  content: "Menu"; /* Text to be added after the SVG */
+  position: absolute;
+  top: 13px;
+  color: #ff4c4c; /* Adjust the text color as needed */
+  font-weight: bold;
 }
 
 ul {
