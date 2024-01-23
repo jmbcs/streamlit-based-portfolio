@@ -9,10 +9,11 @@ sys.path.append(parent)
 # import hydralit as hy
 
 # when we import hydralit, we automatically get all of Streamlit
+import hydralit
 import hydralit as hy
+import hydralit_components as hc
 import streamlit as st
 
-import portfolio.buttons
 import portfolio.image
 import portfolio.sections
 import portfolio.style
@@ -24,19 +25,20 @@ over_theme = {
     "menu_background": "transparent",
 }
 app = hy.HydraApp(
-    title="",
-    favicon="🐙",
+    title="Portfolio - Júlio Silva",
+    favicon="💼",
     hide_streamlit_markers=True,
-    banner_spacing=[5, 30, 60, 30, 5],
+    # banner_spacing=[5, 30, 60, 30, 5],
     use_navbar=True,
-    navbar_sticky=False,
+    navbar_sticky=True,
     navbar_animation=True,
     layout="wide",
     navbar_theme=over_theme,
+    nav_horizontal=True,
 )
 
 
-@app.addapp(title="About Me")
+@app.addapp(title="About Me", is_home=True)
 def section_about_me():
     # hy.info("Hello from app 1")
     portfolio.sections.set_about_section()
@@ -68,16 +70,6 @@ def section_contact():
 
 
 def run():
-    # Run the whole lot, we get navbar, state management and app isolation, all with this tiny amount of work.
-    # app.run()
-
-    # hy.set_page_config(
-    #     page_title="Portfolio - Júlio Silva",
-    #     page_icon="💼",
-    #     layout="wide",
-    #     initial_sidebar_state="collapsed",
-    # )
-
     # set the styles
     portfolio.style.set_style(path_to_style=config.styles.main)
     st.markdown(config.html.stucture_style, unsafe_allow_html=True)
@@ -99,10 +91,8 @@ def run():
     # add tech bar
     st.markdown(config.html.structure_tech_stack, unsafe_allow_html=True)
 
-    app.run()
-
     # add button bar and logic for tabs
-    # portfolio.buttons.set_main_button_bar()
+    app.run()
 
     # # add divider at end
     st.markdown(config.html.structure_divider, unsafe_allow_html=True)
