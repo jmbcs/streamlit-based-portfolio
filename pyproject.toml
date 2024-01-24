@@ -26,4 +26,4 @@ dynamic = ["dependencies"]
 dependencies = { file = ["requirements.txt"] }
 
 [project.scripts]
-mv-api = "portfolio.__main__:run"
+portfolio = "portfolio.__main__:run"
